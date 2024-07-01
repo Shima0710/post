@@ -1,18 +1,85 @@
-# Vue 3 + TypeScript + Vite
+# ViteとVue,Typescriptを使用した投稿アプリPost
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## 概要
+このプロジェクトは、ViteとVue 3,Typescriptを使用して作成されたシンプルな投稿アプリです。ユーザーは投稿を作成し、それに対するコメント（レスポンス）を追加することができます。ダークモードとライトモードの切り替え機能も実装されています。
 
-## Recommended IDE Setup
+## 機能
+- 投稿の作成
+- 投稿へのコメント（レスポンス）の追加
+- 投稿とコメントへの「いいね」機能
+- 投稿とコメントの削除
+- ダークモードとライトモードの切り替え
+- ページネーション機能
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+## セットアップ
 
-## Type Support For `.vue` Imports in TS
+### 前提条件
+- Node.js（バージョン14以上）
+- npmまたはyarn
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+### インストール手順
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+1. リポジトリをクローンします:
 
-1. Disable the built-in TypeScript Extension
-   1. Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-   2. Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+    git clone https://github.com/Shima0710/post.git
+
+2. プロジェクトディレクトリに移動します:
+
+    cd post
+
+3. 必要な依存パッケージをインストールします:
+
+    npm install
+
+    または
+
+
+    yarn install
+
+
+### 開発サーバーの起動
+
+以下のコマンドを実行して開発サーバーを起動します:
+
+npm run dev
+
+または
+
+sh
+コードをコピーする
+yarn dev
+ブラウザで http://localhost:3000 を開いてアプリケーションにアクセスします。
+
+## 使用方法
+
+
+### 投稿の作成
+テキストエリアに投稿内容を入力し、「投稿」ボタンをクリックします。
+投稿がリストの先頭に追加されます。
+### コメントの追加
+各投稿の「返信を入力」フィールドにコメントを入力します。
+「返信」ボタンをクリックすると、コメントが投稿に追加されます。
+### 「いいね」機能
+各投稿およびコメントのハートアイコンをクリックすると、「いいね」されます。
+ハートアイコンが赤色に変わります。
+### 削除機能
+各投稿およびコメントのゴミ箱アイコンをクリックすると、削除されます。
+ダークモードの切り替え
+ナビゲーションバーの右側にあるスイッチをクリックして、ダークモードとライトモードを切り替えます。
+
+
+### デプロイ
+アプリケーションをデプロイするには、以下のコマンドを実行してビルドします:
+
+npm run build
+または
+
+yarn build
+ビルドされたファイルは dist ディレクトリに出力されます。このディレクトリをWebサーバーにアップロードしてデプロイします。
+
+
+### 技術スタック
+Vue 3
+Vite
+TypeScript
+HTML/CSS
