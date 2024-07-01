@@ -31,8 +31,7 @@
 
     npm install
 
-    または
-
+   
 
     yarn install
 
