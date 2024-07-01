@@ -72,8 +72,9 @@ yarn dev
 
 npm run build
 または
-
 yarn build
+
+
 ビルドされたファイルは dist ディレクトリに出力されます。このディレクトリをWebサーバーにアップロードしてデプロイします。
 
 
