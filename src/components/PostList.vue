@@ -44,7 +44,6 @@ const onDeleteResponse = (postId: string, responseId: string) => {
         <div class="button-group">
           <button @click="onLikePost(post.id)" class="like-button">
             <font-awesome-icon :icon="['fas', 'heart']" :class="{ liked: post.liked }" />
-            いいね
           </button>
           <button @click="onDeletePost(post.id)" class="delete-button">
             <font-awesome-icon :icon="['fas', 'trash']" />
@@ -57,7 +56,6 @@ const onDeleteResponse = (postId: string, responseId: string) => {
             <div class="button-group">
               <button @click="onLikeResponse(post.id, response.id)" class="like-button">
                 <font-awesome-icon :icon="['fas', 'heart']" :class="{ liked: response.liked }" />
-                いいね
               </button>
               <button @click="onDeleteResponse(post.id, response.id)" class="delete-button">
                 <font-awesome-icon :icon="['fas', 'trash']" />
